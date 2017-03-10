@@ -16,11 +16,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-if (window.location.hostname.indexOf('github.io') >= 0) {
-	window.alert('Drag the link to your bookmarks bar; don\'t click it.');
-} else {
-	// Load the main implementation
-	var impl = document.createElement('script');
-	impl.src = 'https://runassudo.github.io/allocics.js/allocics.js';
-	document.body.appendChild(impl);
-}
+// If integrity checking is ever implemented, this is where update notifications will be processed
+
+// Load the main implementation
+var impl = document.createElement('script');
+impl.src = 'https://runassudo.github.io/allocics.js/allocics.js';
+document.body.appendChild(impl);
