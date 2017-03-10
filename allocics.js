@@ -40,7 +40,7 @@
 
 	// ALLOCATE+ STUFF
 
-	var YEAR = 2017; // TODO: Automatically detect this
+	var YEAR = new Date().getFullYear(); // WARNING! May not give the expected result in strange edge-cases
 
 	// Set to all weeks
 	timetableAllWeeks();
