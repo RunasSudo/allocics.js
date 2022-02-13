@@ -327,7 +327,7 @@
 	// Convert location names to addresses
 	// Eg. CL_All-16.Eng-35_220 >> 220 Eng-35, 16 Alliance Lane
 	function parseLocation(loc) {
-		loc = loc.toString();
+		console.log(loc);
 		tLoc = loc.split(".")[1].split("_");
 		try {
 			address = ", " + addresses[tLoc[0]];
