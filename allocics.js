@@ -383,7 +383,6 @@
 		['PRODID', '-//RunasSudo//allocics.js//EN']
 	];
 	$.each(timetable.get_visible_events(), function (i, evt) {
-		console.log(evt.id);
 		var startTimeBits = evt.node.start_time.split(':');
 
 		var dates = weekpatternToDateList(evt.node.day_of_week, evt.node.week_pattern, evt.node.start_date);
@@ -433,5 +432,5 @@
 	var blob = new Blob([calStr], {
 		type: 'text/calendar;charset=utf-8'
 	});
-	//saveAs(blob, 'allocate_' + YEAR + '.ics');
+	saveAs(blob, 'allocate_' + YEAR + '.ics');
 })();
