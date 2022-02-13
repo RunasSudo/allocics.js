@@ -327,6 +327,9 @@
 	// Convert location names to addresses
 	// Eg. CL_All-16.Eng-35_220 >> 220 Eng-35, 16 Alliance Lane
 	function parseLocation(loc) {
+		if (loc.indexOf("Online") >= 0) {
+			return "Online"
+		}
 		console.log("START");
 		console.log(loc);
 		let tLoc = loc.split(".")[1].split("_");
