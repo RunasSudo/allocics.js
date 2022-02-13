@@ -6,8 +6,11 @@ This fork (shown right) makes some needed improvements to [RunasSudo's version](
 - Names events after unit
 - Locations show building addresses
 
+--- | ---
 ![eventOld.png](/assets/eventOld.PNG) | ![eventNew.png](/assets/eventNew.PNG)
+
 # Images
+--- | ---
 ![eventOld.png](/assets/eventOld.PNG) | ![eventNew.png](/assets/eventNew.PNG)
 
 ## Help wanted
