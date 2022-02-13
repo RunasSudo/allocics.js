@@ -5,9 +5,9 @@ This fork (shown right) makes some needed improvements to [RunasSudo's version](
 - Names the ics file with year
 - Names events after unit
 - Locations show building addresses
+
+![eventOld.png](/assets/eventOld.PNG) | ![eventNew.png](/assets/eventNew.PNG)
 # Images
-Old Events | New Events
---- | ---
 ![eventOld.png](/assets/eventOld.PNG) | ![eventNew.png](/assets/eventNew.PNG)
 
 ## Help wanted
