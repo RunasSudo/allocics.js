@@ -327,14 +327,16 @@
 	// Convert location names to addresses
 	// Eg. CL_All-16.Eng-35_220 >> 220 Eng-35, 16 Alliance Lane
 	function parseLocation(loc) {
+		console.log("START");
 		console.log(loc);
-		//tLoc = loc.split(".")[1].split("_");
-		//try {
-		//	address = ", " + addresses[tLoc[0]];
-		//} catch {
-		//	address = '';
-		//}
-		return tLoc[1] + " " + tLoc[0]; //+ address;
+		let tLoc = loc.split(".")[1].split("_");
+		console.log(tLoc);
+		let address = ''
+		try {
+			address = ", " + addresses[tLoc[0]]
+		} catch {}
+		console.log(address);
+		return tLoc[1] + " " + tLoc[0] + address;
 	}
 
 	function pad2(num) {
