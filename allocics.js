@@ -433,5 +433,5 @@
 	var blob = new Blob([calStr], {
 		type: 'text/calendar;charset=utf-8'
 	});
-	saveAs(blob, 'allocate_' + YEAR + '.ics');
+	//saveAs(blob, 'allocate_' + YEAR + '.ics');
 })();
