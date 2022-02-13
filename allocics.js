@@ -394,7 +394,7 @@
 			// Build ICS event
 			cal.push(['BEGIN', 'VEVENT']);
 			cal.push(['UID', window.location.hostname + '@' + evt.id + '|' + j]);
-			cal.push(['SUMMARY', evt.node.activity_group_code + '/' + evt.node.activity_code + ': ' + evt.node.description]);
+			cal.push(['SUMMARY', evt.id.split("_")[0]);
 			cal.push(['DTSTAMP', dateToString(dateBegin)]);
 			cal.push(['DTSTART', dateToString(dateBegin)]);
 			cal.push(['DTEND', dateToString(dateEnd)]);
