@@ -383,7 +383,7 @@
 		['PRODID', '-//RunasSudo//allocics.js//EN']
 	];
 	$.each(timetable.get_visible_events(), function (i, evt) {
-		console.log(evt);
+		console.log(evt.id);
 		var startTimeBits = evt.node.start_time.split(':');
 
 		var dates = weekpatternToDateList(evt.node.day_of_week, evt.node.week_pattern, evt.node.start_date);
