@@ -5,6 +5,6 @@ This fork (shown right) makes some needed improvements to [RunasSudo's version](
 - Names the ics file with year
 - Names events after unit
 - Locations show building addresses
-![eventOld.png](/assets/eventOld.PNG) | ![eventNew.png](/assets/eventNew.PNG)
+| ![eventOld.png](/assets/eventOld.PNG) | ![eventNew.png](/assets/eventNew.PNG) |
 ## Help wanted
 If some of your on campus events don't show addresses, please tell me all about it in Issues. If you have any other suggestions, tell me in Issues as well.
