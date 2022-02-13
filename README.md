@@ -1,4 +1,7 @@
-# allocics.js
-
+## allocics.js
 One-click export of Allocate+ timetables to ICS format for Google Calendar, Apple Calendar, etc.
-This fork names all the event titles with the subject name to make it more readable.
+# Improvements
+- Name events after unit
+- Locations show building address
+# Help wanted
+If some of your on campus events don't show addresses, please tell me all about it in Issues
