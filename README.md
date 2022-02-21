@@ -8,7 +8,7 @@ This fork makes some needed improvements to [RunasSudo's version](https://github
 
 Old Events | New Events
 --- | ---
-![](/assets/eventOld.PNG) | ![](/assets/eventOld.PNG)
+![](/assets/eventOld.PNG) | ![](/assets/eventNew.PNG)
 
 ## Help wanted
 If some of your on campus events don't show addresses, please tell me all about it in Issues. If you have any other suggestions, tell me in Issues as well.
