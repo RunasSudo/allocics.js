@@ -259,69 +259,16 @@
 	timetableAllWeeks();
 
 	var addresses = {
-		'BioPRIA': '15 Alliance Lane', //temp
-		'Biological Sciences': '25 Rainforest Walk', //temp
-		'Biology': '18 Innovation Walk',
-		'B-FY': '23 Rainforest Walk', //temp
-		'BLTB': '7 Ancora Imparo Way',
-		'Boiler House': '22 Research Way', //temp
-		'Buildings and Property': '26 & 30 Research Way', //temp
-		'CSB': '19 Rainforest Walk', //temp
-		'Chemistry': '17 Rainforest Walk',
-		'DESP': '36 Scenic Boulevard', //temp
-		'EAE': '9 Rainforest Walk', //temp
-		'Education': '29 Ancora Imparo Way',
-		'Eng-31': '17 College Walk',
-		'Eng-33': '19 College Walk',
-		'Eng-35': '16 Alliance Lane',
-		'Eng-36': '18 Alliance Lane',
-		'Eng-37': '17 Alliance Lane',
-		'Eng-60': '23 College Walk',
-		'Eng-69': '22 Alliance Lane',
-		'Eng-72': '14 Alliance Lane',
-		'Grounds Workshop': '14 Scenic Boulevard', //temp
-		'GCF': '13 Rainforest Walk', //temp
-		'Ian Potter': '48 Exhibition Walk', //temp
-		'IT': '25 Exhibition Walk', //temp
-		'IV-BD': '12 Innovation Walk', //temp
-		'JSC': '12 Ancora Imparo Way', //temp
-		'JMREC': '50 College Walk', //temp
-		'JMREL': '52 College Walk', //temp
-		'JMSS': '39 Innovation Walk', //temp
-		'LBL': '15 Ancora Imparo Way', //temp
-		'LTB': '19 Ancora Imparo Way',
-		'Mathematics': '9 Rainforest Walk',
-		'Med-A': '37 Rainforest Walk',
-		'Med-B': '39 Rainforest Walk',
-		'Med-C': '10 Chancellors Walk',
-		'Med-D': '35 Rainforest Walk',
-		'Med-E': '9 Ancora Imparo Way',
-		'Med-F': '26 Innovation Walk',
-		'MNHSFT': '33 Innovation Walk', //temp
-		'MCN': '151 Wellington Road', //temp
-		'Menzies': '20 Chancellors Walk', //temp
-		'MBI': '770 Blackburn Road', //temp
-		'MCEM': '10 Innovation Walk', //temp
-		'MCCC': '62 Beddoe Avenue', //temp
-		'MLC': '60 Beddoe Avenue', //temp
-		'Sport': '42 Scenic Boulevard', //temp
-		'MSDI': '8 Scenic Boulevard', //temp
-		'MUARC': '21 Alliance Lane', //temp
-		'MUBP': '680-738 Blackburn Road', //temp
-		'MPavilion': '26 Ancora Imparo Way', //temp
-		'New Horizons': '20 Research Way', //temp
-		'Northern Pavilion': '28 Scenic Boulevard', //temp
-		'OSL': '22 Rainforest Walk', //temp
-		'Performing Arts': '55 Scenic Boulevard', //temp
-		'Physics': '10 College Walk', //temp
-		'PSC': '54 College Walk', //temp
-		'RBH': '49 Scenic Boulevard', //temp
-		'SIT': '14 Rainforest Walk', //temp
-		'SITDP': '26 Research Way', //temp
-		'STRIP1': '15 Innovation Walk', //temp
-		'STRIP2': '19 Innovation Walk', //temp
-		'STRIP3': '23 Innovation Walk', //temp
-		'Woodside': '20 Exhibition Walk', //temp
+		'Res': 'Research Way',
+		'All': 'Alliance Lane',
+		'Col': 'College Walk',
+		'Spo' : 'Sports Walk',
+		'Cha' : 'Chancellors Walk',
+		'Anc' : 'Ancora Imparo Way',
+		'Inn' : 'Innovation Walk',
+		'Rai' : 'Rainforest Walk',
+		'Exh' : 'Exhibition Walk',
+		'Sce' : 'Scenic Boulevard'
 	};
 
 	// Convert location names to addresses
@@ -329,13 +276,15 @@
 	function parseLocation(loc) {
 		if (loc.indexOf("Online") >= 0) {
 			return "Online"
-		}
-		let tLoc = loc.split(".")[1].split("_");
-		let address = ''
-		try {
-			address = ", " + addresses[tLoc[0]]
+		}		
+		let tLoc = loc.split(".");			//[CL_All-16][Eng-35_220]
+		let bldng = tLoc[1].split("_");		//[Eng-35][220]
+		let addrs = tLoc[0].split("_")[1].split("-");//[All][16]
+		let street = addrs[0];
+		try	{
+			street = addresses[addrs[0]];
 		} catch {}
-		return tLoc[1] + " " + tLoc[0] + address;
+		return bldng[1] + " " + bldng[0] + ", " + addrs[1] + " " + street;
 	}
 
 	function pad2(num) {
