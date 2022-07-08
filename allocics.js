@@ -24,7 +24,7 @@
 		return;
 	}
 
-	console.log("V3");
+	console.log("V5");
 
 	// Initialise the timetable if necessary
 	if (!timetableInit) {
@@ -279,16 +279,16 @@
 	function parseLocation(loc) {
 		if (loc.indexOf("Online") >= 0) {
 			return "Online"
-		}		
-		let tLoc = loc.split(".");			//[CL_All-16][Eng-35_220]
-		let bldng = tLoc[1].split("_");		//[Eng-35][220]
-		let addrs = ["", ""];
-		let street = tLoc[0];
+		}
 		try	{
-			addrs = tLoc[0].split("_")[1].split("-");//[All][16]
-			street = addrs[0];
+			let tLoc = loc.split(".");			//[CL_All-16][Eng-35_220]
+			let bldng = tLoc[1].split("_");		//[Eng-35][220]		
+			let addrs = tLoc[0].split("_")[1].split("-");//[All][16]
+			let street = addrs[0];
 			street = addresses[addrs[0]];
-		} catch {}
+		} catch {
+			return loc;
+		}
 		return bldng[1] + " " + bldng[0] + ", " + addrs[1] + " " + street;
 	}
 
