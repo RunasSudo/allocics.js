@@ -23,6 +23,8 @@
 		return;
 	}
 
+	console.log("V1");
+
 	// Initialise the timetable if necessary
 	if (!timetableInit) {
 		initTimetable();
