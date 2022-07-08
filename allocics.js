@@ -279,7 +279,13 @@
 		}		
 		let tLoc = loc.split(".");			//[CL_All-16][Eng-35_220]
 		let bldng = tLoc[1].split("_");		//[Eng-35][220]
-		let addrs = tLoc[0].split("_")[1].split("-");//[All][16]
+		let addrs;
+		try	{
+			addrs = tLoc[0].split("_")[1].split("-");//[All][16]
+		} catch {
+			console.log(tLoc[0]);
+		}
+		
 		let street = addrs[0];
 		try	{
 			street = addresses[addrs[0]];
