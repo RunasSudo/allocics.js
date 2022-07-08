@@ -23,7 +23,7 @@
 		return;
 	}
 
-	console.log("V2");
+	console.log("V3");
 
 	// Initialise the timetable if necessary
 	if (!timetableInit) {
@@ -281,14 +281,11 @@
 		}		
 		let tLoc = loc.split(".");			//[CL_All-16][Eng-35_220]
 		let bldng = tLoc[1].split("_");		//[Eng-35][220]
-		let addrs = "idk";
-		console.log(tLoc[0]);
+		let addrs;
+		let street = tLoc[0];
 		try	{
 			addrs = tLoc[0].split("_")[1].split("-");//[All][16]
-		} catch {}
-		
-		let street = addrs[0];
-		try	{
+			street = addrs[0];
 			street = addresses[addrs[0]];
 		} catch {}
 		return bldng[1] + " " + bldng[0] + ", " + addrs[1] + " " + street;
