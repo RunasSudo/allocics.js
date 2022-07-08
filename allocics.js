@@ -20,6 +20,7 @@
 	// Sanity checks
 	if (typeof (timetableInit) === "undefined") {
 		alert('This doesn\'t seem to be an Allocate+ page. Please log in to Allocate+ before clicking the bookmark.');
+		open("https://my-timetable.monash.edu/even/student");
 		return;
 	}
 
@@ -281,7 +282,7 @@
 		}		
 		let tLoc = loc.split(".");			//[CL_All-16][Eng-35_220]
 		let bldng = tLoc[1].split("_");		//[Eng-35][220]
-		let addrs;
+		let addrs = ["", ""];
 		let street = tLoc[0];
 		try	{
 			addrs = tLoc[0].split("_")[1].split("-");//[All][16]
