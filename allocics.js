@@ -24,7 +24,7 @@
 		return;
 	}
 
-	console.log("V5");
+	console.log("V6");
 
 	// Initialise the timetable if necessary
 	if (!timetableInit) {
@@ -286,10 +286,9 @@
 			let addrs = tLoc[0].split("_")[1].split("-");//[All][16]
 			let street = addrs[0];
 			street = addresses[addrs[0]];
-		} catch {
-			return loc;
-		}
-		return bldng[1] + " " + bldng[0] + ", " + addrs[1] + " " + street;
+			return bldng[1] + " " + bldng[0] + ", " + addrs[1] + " " + street;
+		} catch {}
+		return loc;		
 	}
 
 	function pad2(num) {
