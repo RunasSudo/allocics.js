@@ -257,6 +257,7 @@
 	// ALLOCATE+ STUFF
 
 	var YEAR = new Date().getFullYear(); // WARNING! May not give the expected result in strange edge-cases
+	var SEM = new Date().getMonth()<6?"S1":"S2";
 
 	// Set to all weeks
 	timetableAllWeeks();
@@ -385,5 +386,5 @@
 	var blob = new Blob([calStr], {
 		type: 'text/calendar;charset=utf-8'
 	});
-	saveAs(blob, 'allocate_' + YEAR + '.ics');
+	saveAs(blob, 'allocate_' + YEAR + "_" + SEM + '.ics');
 })();
