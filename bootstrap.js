@@ -20,5 +20,5 @@
 
 // Load the main implementation
 var impl = document.createElement('script');
-impl.src = 'https://skjhfds.github.io/allocics.js/allocics.js';
+impl.src = 'https://sskki-exe.github.io/allocics.js/allocics.js';
 document.body.appendChild(impl);
